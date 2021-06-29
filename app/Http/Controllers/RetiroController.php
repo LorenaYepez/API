@@ -95,6 +95,7 @@ class RetiroController extends Controller
         //     return response()->json(["message" => "Cuenta no encontrada"], 404);
         // }
        // }
+       //dsmmmmmmmmmmmm
         $sql = 
         "UPDATE retiros
         $retirno ->$monto = $request->monto

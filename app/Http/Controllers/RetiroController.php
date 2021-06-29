@@ -87,32 +87,15 @@ class RetiroController extends Controller
     public function update(Request $request, $id)
     {
         //
-        // if(Retiro::where('id', $id)->exists()) {
-        //     $retiro = Retiro::find($id);
-        //     $retiro->update($request->all());
-        //     return response()->json($retiro, 202);
-        // } else {
-        //     return response()->json(["message" => "Cuenta no encontrada"], 404);
-        // }
-       // }
-       //dsmmmmmmmmmmmm
-        $sql = 
-        "UPDATE retiros
-        $retirno ->$monto = $request->monto
-        SET monto = monto - $monto
-        WHERE retiros.id  = $id";
-        $retiro = DB::select($sql);
-        return $retiro;
+        if(Retiro::where('id', $id)->exists()) {
+            $retiro = Retiro::find($id);
+            $retiro->update($request->all());
+            return response()->json($retiro, 202);
+        } else {
+            return response()->json(["message" => "Cuenta no encontrada"], 404);
+        }
     }
 
-/*
-public function getSaldo($idCuenta,$monto)
-	{
-
-		$sql="SELECT saldo FROM cuenta WHERE  idcuenta='$idCuenta' AND saldo>='$monto'";
-		return ejecutarConsultasimplefila($sql);//retorna valores  
-	}
-*/
     /**
      * Remove the specified resource from storage.
      *

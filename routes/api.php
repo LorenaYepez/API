@@ -21,5 +21,6 @@ use Illuminate\Http\Request;
 Route::apiResource('personas','PersonaController');
 Route::apiResource('cuentas','CuentaController');
 Route::apiResource('retiros','RetiroController');
+Route::post('serviciouno','ServicioController@retirox');
 
 

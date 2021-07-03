@@ -31,7 +31,7 @@ class ServicioController extends Controller
            $sql2 = "INSERT INTO retiros (idCuenta, monto, saldo, fecha_retiro)
                                 VALUES ($idCuenta, $monto, $montonuevo, date('now'))";
             $result3 = DB::select($sql2);              
-            return "Su saldo actual es: $montonuevo";               
+            return "$montonuevo";               
         }
     }
 }
